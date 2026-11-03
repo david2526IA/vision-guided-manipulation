@@ -1,0 +1,28 @@
+simulation_only: true
+workspace_mm:
+  x_min: 0.0
+  x_max: 300.0
+  y_min: 0.0
+  y_max: 220.0
+  margin: 12.0
+minimum_area_px: 120
+homography:
+  # Demo mapping: synthetic 640x480 image to a 300x220 mm tabletop.
+  - [0.46875, 0.0, 0.0]
+  - [0.0, 0.4583333333, 0.0]
+  - [0.0, 0.0, 1.0]
+objects:
+  red:
+    lower_hsv: [0, 120, 70]
+    upper_hsv: [10, 255, 255]
+  green:
+    lower_hsv: [40, 80, 70]
+    upper_hsv: [85, 255, 255]
+  blue:
+    lower_hsv: [95, 100, 70]
+    upper_hsv: [130, 255, 255]
+grasp:
+  approach_z_mm: 80.0
+  grasp_z_mm: 12.0
+  lift_z_mm: 100.0
+
